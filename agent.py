@@ -72,7 +72,8 @@ llm_context = OpenAI(
 
 git_ = Github(os.getenv("GITHUB_TOKEN")) if os.getenv("GITHUB_TOKEN") else Github()
 repo_url = os.getenv("REPOSITORY")
-pr_number = os.getenv("PR_NUMBER")
+#pr_number = os.getenv("PR_NUMBER")
+pr_number = "1"
 
 def get_sha(repo_):
     """get sha from repo"""
