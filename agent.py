@@ -50,21 +50,21 @@ Once a review is generated, you need to run a final check and post it to GitHub.
 
 
 llm = OpenAI(
-    model=os.getenv("OPENAI_MODEL"),
+    model="gpt-4.1-mini",
     api_key=os.getenv("OPENAI_API_KEY"),
     api_base=os.getenv("OPENAI_BASE_URL"),
     system_prompt=context_agent_prompt
 )
 
 llm_commenter = OpenAI(
-    model=os.getenv("OPENAI_MODEL"),
+    model="gpt-4.1-mini",
     api_key=os.getenv("OPENAI_API_KEY"),
     api_base=os.getenv("OPENAI_BASE_URL"),
     system_prompt=commenter_agent_system_prompt
 )
 
 llm_context = OpenAI(
-    model=os.getenv("OPENAI_MODEL"),
+    model="gpt-4.1-mini",
     api_key=os.getenv("OPENAI_API_KEY"),
     api_base=os.getenv("OPENAI_BASE_URL"),
     system_prompt=context_agent_prompt
